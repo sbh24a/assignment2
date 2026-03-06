@@ -1,0 +1,52 @@
+1. Paste the console output you saved at the end of step 3.C (2 points)
+ 	git push
+	Enumerating objects: 9, done.
+	Counting objects: 100% (9/9), done.
+	Delta compression using up to 8 threads
+	Compressing objects: 100% (5/5), done.
+	Writing objects: 100% (7/7), 948 bytes | 474.00 KiB/s, done.
+	Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+	remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/sbh24a/assignment2.git
+   f4975e5..11575a1  master -> master
+
+2. How many commits have been done to the repository (not only by you, but by anyone) so far? Write the git command you used to get this information (4 points)
+	git rev-list --count HEAD
+	9
+
+3. When was the README.md  file modified last? Write the git command you used to get this information (4 points)
+	git log -1 -- README.md
+	commit 9a8c72e04559869d71b3f17556a3e14b533e4fcd
+	Author: Savannah Holmes <sbh24a@fsu.edu>
+	Date:   Fri Mar 6 11:29:09 2026 -0700
+
+	    Update repository information files
+
+    	Add repository owner information to README.md
+
+    	The README.md file now includes the repository owner's name and 	FSUID.
+
+4. Mention two reasons why branches are used in a Git repository (4 points)
+	Branches allow developers to work on new features or fixes without affecting the main branch.
+	Branches make it easier to test, review, and merge changes safely.
+
+5. What is the difference between git log and git status? (4 points)
+	git log shows the commit history of the repository.
+	git status shows the current state of the working directory and staging area, including modified, staged, and untracked files.
+
+6. What command would you use to see the commits where “Vehicle.h” was one of the committed files? (4 points)
+	git log --Vehicle.h
+
+7. What command would you use to see the commits whose commit message contains the word “file”? (4 points)
+	git log --grep="file"
+
+8. In the context of object-oriented programming (I) What is inheritance? (II) What is polymorphism? (III) What is encapsulation? (6 points)
+	(I) Inheritance is when one class acquires the attributes and methods of another class, allowing code reuse and the creation of hierarchical relationships between classes.
+	(II) Polymorphism is the ability for different classes to be treated through a common interface, where the same method name can behave differently depending on the object.
+	(III) Encapsulation is the practice of bundling data and methods together inside a class and restricting direct access to internal details.
+
+9.  What is the main difference between the “Dictator and Lieutenants” workflow and the “Integration manager” workflow? (5 points)
+	The main difference is that in Dictator and Lieutenants workflow, trusted lieutenants collect and integrate changes from groups of developers before passing them to a central leader or "dictator" who makes the final integration decisions. In the Integration manager workflow, each developer typically works in their own fork, and one integration manager reviews and pulls approved changes into the main repository. 
+
+10. How would a team of 100 developers benefit from following the “Dictator and Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
+	A team of 100 developers would benefit because the Dictator and Lieutenants workflow scales better. It reduces bottlenecks by dividing responsibility among lieutenants, improves code review and coordination, and prevents all developers from pushing directly into one central branch. This makes large projects easier to manage and helps maintain code quality.
